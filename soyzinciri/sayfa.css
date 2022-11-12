@@ -152,7 +152,7 @@ a {
 .sosol::after {
   height: 10px;
   border-left: 2px solid;
-  top: -15px;
+  top: -14px;
   left: 101px;
 }
 
@@ -175,6 +175,6 @@ a {
 .sosag::after {
   height: 10px;
   border-left: 2px solid;
-  top: -15px;
+  top: -14px;
   right: 99px;
 }
