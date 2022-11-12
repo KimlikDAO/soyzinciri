@@ -39,7 +39,8 @@ const sayfaOku = (dosyaAdı) => {
 
 /** @const {Object<string, string>} */
 const SAYFALAR = {
-  "/": "oduller/sayfa.html",
+  "/": "ana/sayfa.html",
+  "/kisi": "kisi/sayfa.html",
 };
 
 createServer({
