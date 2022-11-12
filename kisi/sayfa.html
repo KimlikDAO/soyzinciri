@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html lang=tr>
+<html data-en-lang="en" lang=tr>
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>KimlikDAO | Soy Zinciri ⛓</title>
-  <link href="/soyzinciri/sayfa.css" rel="stylesheet" type="text/css" />
-  <link href="/kisi/sayfa.css" rel="stylesheet" type="text/css" />
+  <title data-en="KimlikDAO | On-chain digital ID">KimlikDAO | Soy Zinciri ⛓</title>
+  <link rel="preload" crossorigin href="/font/f400.woff2" as="font" />
+  <link rel="preload" crossorigin href="/font/f700.woff2" as="font" />
+  <link href="/font/lato-ttf.css" rel="stylesheet" type="text/css" data-remove />
 </head>
 
 <body>
+  <!-- n harfi navigation'ın kısaltması -->
   <div id="nal" class="nav">
+    <h2><a href="/">KimlikDAO</a></h2>
     <birim:cüzdan />
   </div>
-
-  <div class="pe">
-  </div>
+  <!-- birim:tckt style="opacity:0"-->
+  <a href="javascript:" class="btn act" id="tab">Çocuk Ekle</a>
   <script async type="module" src="/kisi/sayfa.js" data-remove-type></script>
 </body>
 
