@@ -128,3 +128,7 @@ h7 {
 .tcal {
   line-height: 1.5;
 }
+
+.avatar {
+  border-radius: 10px;
+}
