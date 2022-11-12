@@ -70,11 +70,15 @@ a {
   justify-content: space-between;
 }
 
-.kifot  {
+.kifot {
   width: 240px;
   height: 240px;
   box-shadow: 0 2px 10px rgb(0 0 0 / 15%);
   margin-bottom: 20px;
+}
 
-
+.kigalpic {
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
 }
