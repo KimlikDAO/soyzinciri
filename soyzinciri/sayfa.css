@@ -1,12 +1,180 @@
+html {
+  font-family: 'Montserrat';
+  font-size: 14px;
+}
+
+body {
+  margin: 0;
+}
+
+.sopc {
+  max-width: 1200px;
+  margin: 2em auto;
+}
+
 a {
   text-decoration: none;
   color: #000;
+}
+
+.navc {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  box-sizing: border-box;
 }
 
 .nav {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  max-width: 1200px;
-  width: 100%;
+  width: 1200px;
+  align-items: center;
+  height: 60px;
+}
+
+.sokusak {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200;
+}
+
+.socont {
+  display: flex;
+  justify-content: center;
+  margin: 3em;
+}
+
+.socift {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  position: relative;
+}
+
+.sobirey {
+  border-radius: 10px;
+  box-sizing: border-box;
+  width: 200px;
+  height: 175px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+
+.sobirey:hover {
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.sofotoc {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  border-width: 4px solid transparent;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-top: 1em;
+  background-clip: padding-box;
+  box-sizing: border-box;
+}
+
+.sofotoc::after {
+  position: absolute;
+  height: 104px;
+  width: 104px;
+  top: -2px;
+  left: -2px;
+  content: '';
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.sofotoc.e::after {
+  background: linear-gradient(#CDFCF6,#6C4AB6);
+}
+
+.sofotoc.k::after {
+  background: linear-gradient(#FFE1E1, #FF8DC7);
+}
+
+.sotextc {
+  width: 150px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+}
+
+.soline::before,
+.soline::after {
+  position: absolute;
+  content: "";
+}
+
+.soline::before {
+  width: 100px;
+  border-top: 2px solid;
+  top: 75px;
+  left: 200px;
+}
+
+.soline::after {
+  height: 120px;
+  border-left: 2px solid;
+  top: 75px;
+  left: 250px;
+}
+
+.sosol::before,
+.sosol::after {
+  position: absolute;
+  content: "";
+}
+
+.sosol::before {
+  width: 200px;
+  height: 10px;
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+  border-bottom-left-radius: 10px;
+  left: -100px;
+  top: -25px;
+}
+
+.sosol::after {
+  height: 10px;
+  border-left: 2px solid;
+  top: -15px;
+  left: 101px;
+}
+
+.sosag::after,
+.sosag::before {
+  position: absolute;
+  content: "";
+}
+
+.sosag::before {
+  width: 200px;
+  height: 10px;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+  border-bottom-right-radius: 10px;
+  right: -101px;
+  top: -25px;
+}
+
+.sosag::after {
+  height: 10px;
+  border-left: 2px solid;
+  top: -15px;
+  right: 99px;
 }

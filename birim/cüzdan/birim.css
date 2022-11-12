@@ -1,3 +1,11 @@
+button {
+  min-height: 45px;
+  border-radius: 6px;
+  border: 1px solid #c2c2c2;
+  cursor: pointer;
+  outline: none;
+}
+
 #nb {
   display: flex;
   align-items: center;
