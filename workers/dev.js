@@ -39,7 +39,7 @@ const sayfaOku = (dosyaAdı) => {
 
 /** @const {Object<string, string>} */
 const SAYFALAR = {
-  "/": "ana/sayfa.html",
+  "/soyzinciri": "soyzinciri/sayfa.html",
   "/kisi": "kisi/sayfa.html",
 };
 
