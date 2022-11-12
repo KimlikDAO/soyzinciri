@@ -131,4 +131,5 @@ h7 {
 
 .avatar {
   border-radius: 10px;
+  object-fit: cover;
 }

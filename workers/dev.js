@@ -37,12 +37,6 @@ const sayfaOku = (dosyaAdı) => {
   return sayfa.replace("</head>", stiller + "</head>");
 }
 
-/** @const {Object<string, string>} */
-const SAYFALAR = {
-  "/soyzinciri": "soyzinciri/sayfa.html",
-  "/kisi": "kisi/sayfa.html",
-};
-
 createServer({
   server: { middlewareMode: true },
   appType: 'custom'
@@ -52,10 +46,11 @@ createServer({
   app.use("/", (req, res, next) => {
     if (req.path == '/') {
       res.redirect('/soyzinciri');
-    } else if (!(req.path in SAYFALAR)) {
-      res.status(200).end(); // Dev sunucuda hata vermemeye çalış
     } else {
-      let sayfa = sayfaOku(SAYFALAR[req.path]);
+      let fileName = req.path.startsWith("/kisi")
+        ? "kisi/sayfa.html"
+        : "soyzinciri/sayfa.html";
+      let sayfa = sayfaOku(fileName);
       vite.transformIndexHtml(req.path, sayfa).then((sayfa) => {
         res.status(200)
           .set({ 'Content-type': 'text/html;charset=utf-8' })
