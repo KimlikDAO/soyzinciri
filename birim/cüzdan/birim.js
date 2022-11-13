@@ -3,7 +3,7 @@ import dom from "/lib/util/dom";
 /** @type {?string} */
 let Adres = null;
 /** @type {string} */
-let Ağ = "0xa86a";
+let Ağ = "0xa868";
 /** @type {?function(string)} */
 let Bağlanınca = null;
 /** @type {?function()} */
@@ -29,7 +29,7 @@ const adres = () => Adres;
 
 /** @const {Object<string, Array< string>>} */
 const AğBilgileri = {
-  "0xa86a": ["snowtrace.io", "Avalanche"],
+  "0xa868": ["snowtrace.io", "Avalanche"],
   "0x1": ["etherscan.io", "Ethereum"],
   "0x89": ["polygonscan.com", "Polygon"], 
   "0xa4b1": ["arbiscan.io", "Arbitrum"],
@@ -176,7 +176,7 @@ dom.adla("nld").onclick = (event) => {
 
 { // Ağ menüsünü oluştur.
   const ağMenüsü = dom.adla("ncd");
-  const avax = dom.adla("nc0xa86a");
+  const avax = dom.adla("nc0xa868");
   avax.replaceChild(AğButonu.firstElementChild.cloneNode(true),
     avax.firstElementChild);
   dom.menüYarat(AğButonu, ağMenüsü);
@@ -198,7 +198,7 @@ dom.adla("nld").onclick = (event) => {
 if (window["ethereum"]) {
   AdresButonu.onclick = bağla;
   dom.adla("nad0").onclick = () =>
-    window.location.href = dom.TR ? "/incele" : "/view";
+    window.location.href = "https://kimlikdao.org/incele";
 
   dom.adla("nad1").onclick = () =>
     window.location.href = dom.TR ? "/oyla" : "/vote";
@@ -233,14 +233,14 @@ if (window["ethereum"]) {
 /** @const {Object<string, !Array<string>>} */
 const Paralar = dom.TR ? {
   "0x1": ["ether", "’den", "’e"],
-  "0xa86a": ["AVAX", "’tan", "’a"],
+  "0xa868": ["AVAX", "’tan", "’a"],
   "0x89": ["MATIC", "’ten", "’e"],
   "0xa4b1": ["ether", "'den", "’e"],
   "0xfa": ["FTM", "’dan", "’a"],
   "0x38": ["BNB", "’den", "’ye"],
 } : {
   "0x1": ["ether"],
-  "0xa86a": ["AVAX"],
+  "0xa868": ["AVAX"],
   "0x89": ["MATIC"],
   "0xa4b1": ["ether"],
   "0xfa": ["FTM"],
