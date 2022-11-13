@@ -5,8 +5,9 @@ import Cüzdan from '/birim/cüzdan/birim';
 import ipfs from '/lib/ipfs.js';
 import { hex, hexten } from '/lib/util/çevir';
 
+
 dom.adla("kib").onclick = () => {
-  Tckt.yüzGöster(true);
+  Tckt.çevir();
 }
 
 const galleryDiv = dom.adla("kigal");
