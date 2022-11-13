@@ -84,7 +84,7 @@ const açıkTcktGöster = (açıkTckt) => {
       if (satır[1]) dom.adla("tc" + satır[0]).innerText = satır[1];
   }
 
-  Tckt.classList.add("flipped");
+  //Tckt.classList.add("flipped");
 }
 
 export default { açıkTcktGöster, çevir, yüzGöster };

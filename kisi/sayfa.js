@@ -32,6 +32,26 @@ const info = {
       cityOfBirth: "Ankara",
       gender: "F",
       humanID: ""
+    }, "contactInfo": {
+      phone: "+905324211010",
+    }, "kütükBilgileri": {
+      il: "Ankara",
+      ilçe: "Çankaya",
+      mahalle: "Anıttepe Mahallesi",
+      cilt: 28,
+      hane: 9,
+      BSN: 31,
+      tescil: "1921.02.09",
+      annead: "Fevziye",
+      babaad: "Fethi",
+      mhali: "Evli",
+    }, "addressInfo": {
+      il: "Ankara",
+      ilçe: "Şereflikoçhisar",
+      mahalle: "Yusufkuyusu Mahallesi",
+      CSBM: "Yusufkuyusu",
+      dışKapı: "1",
+      içKapı: ""
     }
   },
   "Qmdede": {
@@ -43,6 +63,26 @@ const info = {
       cityOfBirth: "Ankara",
       gender: "M",
       humanID: ""
+    }, "contactInfo": {
+      phone: "+905329305050", 
+    }, "kütükBilgileri": {
+      il: "Ankara",
+      ilçe: "Altındağ",
+      mahalle: "İstiklal Mahallesi",
+      cilt: 35,
+      hane: 4,
+      BSN: 31,
+      tescil: "1919.02.09",
+      annead: "Hatice",
+      babaad: "Osman",
+      mhali: "Evli",
+    }, "addressInfo": {
+      il: "Ankara",
+      ilçe: "Şereflikoçhisar",
+      mahalle: "Yusufkuyusu Mahallesi",
+      CSBM: "Yusufkuyusu",
+      dışKapı: "1",
+      içKapı: ""
     }
   }
 }
@@ -51,6 +91,7 @@ const address = window.location.pathname.split("/")[2];
 TCKT.handleOf(address).then((cidHex) => {
   cidHex = handleOf[address];
   let fileName = cidHex + ".json";
+  console.log(info[cidHex])
   Tckt.açıkTcktGöster(info[cidHex]);
   let images;
   fetch("/data/" + fileName).then(response => response.json()).then((d) => {
