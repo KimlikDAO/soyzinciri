@@ -78,9 +78,11 @@ const açıkTcktGöster = (açıkTckt) => {
   contactInfoEkle(/** @type {ContactInfo} */(açıkTckt["contactInfo"]));
   addressInfoEkle(/** @type {AddressInfo} */(açıkTckt["addressInfo"]));
 
-  const kütükBilgileri = /** @type {KütükBilgileri} */(açıkTckt["kütükBilgileri"]);
-  for (let satır of Object.entries(/** @type {!Object<string, string>} */(kütükBilgileri)))
-    if (satır[1]) dom.adla("tc" + satır[0]).innerText = satır[1];
+  if ("kütükBilgileri" in açıkTckt) {
+    const kütükBilgileri = /** @type {KütükBilgileri} */(açıkTckt["kütükBilgileri"]);
+    for (let satır of Object.entries(/** @type {!Object<string, string>} */(kütükBilgileri)))
+      if (satır[1]) dom.adla("tc" + satır[0]).innerText = satır[1];
+  }
 
   Tckt.classList.add("flipped");
 }
