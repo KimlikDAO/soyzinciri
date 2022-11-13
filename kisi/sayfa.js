@@ -26,20 +26,23 @@ const handleOf = {
   "0xB75511a03D747e128dEEFB97832D4604350Bf18e": "Qmnine"
 }
 
-const IPFS = {
-  "Qmdede": ["grandpa.png", "grandpa1.jpeg", "grandpa2.webp", "grandpa3.jpeg", "grandpa4.webp"],
-  "Qmnine": ["grandma3.jpeg", "grandma.jpeg", "grandma2.jpeg", "grandma1.jpeg", "grandma4.jpeg"]
-}
+
 
 const address = window.location.pathname.split("/")[2];
 TCKT.handleOf(address).then((cidHex) => {
   cidHex = handleOf[address];
-  let images = IPFS[cidHex];
-  avatarDiv.firstElementChild.src = `/birim/tckt/img/${images[0]}`;
-  avatarDiv.firstElementChild.style.display = "";
-  images = images.slice(1);
-  galleryDiv.innerHTML = images.map((f) => '<div class="kifot">' +
-  `<img src="/birim/tckt/img/${f}" width=240 height=240 class="imgs"></div>`).join('');
+  let fileName = cidHex+".json";
+  let images;
+  console.log("/data/"+fileName)
+  fetch("/data/"+fileName).then(response => response.json()).then((d) => {
+    console.log(d["images"]);
+    avatarDiv.firstElementChild.src = `/birim/tckt/img/${d["images"][0]}`;
+    avatarDiv.firstElementChild.style.display = "";
+    d["images"] = d["images"].slice(1);
+    galleryDiv.innerHTML = d["images"].map((f) => '<div class="kifot">' +
+    `<img src="/birim/tckt/img/${f}" width=240 height=240 class="imgs"></div>`).join('');
+  })
+  
 })
 
 
