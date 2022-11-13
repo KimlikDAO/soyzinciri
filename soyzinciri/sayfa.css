@@ -260,3 +260,10 @@ a {
   top: -14px;
   right: 99px;
 }
+
+.soimg {
+  object-fit: cover;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
