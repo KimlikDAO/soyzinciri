@@ -14,13 +14,8 @@ const galleryDiv = dom.adla("kigal");
 const avatarDiv = dom.adla("tca");
 
 
-// dom.adla("na").onclick = Cüzdan.bağla();
-// dom.adla("socnc").onclick = Cüzdan.bağla();
+dom.adla("na").onclick = Cüzdan.bağla();
 
-// Cüzdan.bağlanınca(() => {
-//   dom.adlaGizle("socnc");
-//   dom.adlaGöster("socb");
-// })
 
 const handleOf = {
   "0x1C66D49FB1e9782Aa838A2Ec9fa6F346C85096E0": "Qmdede",
